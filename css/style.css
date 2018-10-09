@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+:root {
+  --width-rate: 100vw / 1920;
+  --section-banner-h: calc(851.8 * var(--width-rate));
+  --section-queenstown-h: calc(873 * var(--width-rate));
+  --section-sport-select-h: calc(700 * var(--width-rate));
+  --sport-item-h: calc(var(--section-sport-select-h) / 2);
+  --golden-ratio: 1.618;
+
+  --queenstown-bg: url("https://goo.gl/dGCNhg");
+  --sky-bg: url("https://goo.gl/aN5fMt");
+  --land-bg: url("https://goo.gl/YnEG3x");
+  --water-bg: url("https://goo.gl/Jvibmn");
+  --skydive-bg: url("../img/skydive.gif");
+  --indoor-skydive-bg: url("../img/iFly.gif");
+  --bungy-bg: url("../img/bungy.gif");
+}
+
+* {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  background-color: #000;
+  /* height: 1000px; */
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col {
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+.hide {
+  left: -9999px !important;
+  position: absolute !important;
+  top: -9999px !important;
+}
+
+.grayScale {
+  filter: grayscale(200%);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.section_banner {
+  background-image: url("http://nztrip.com/wp-content/uploads/2017/11/NZONE-Skydive_Step-4.jpg");
+  height: var(--section-banner-h);
+}
+
+.queenstown {
+  background-image: var(--queenstown-bg);
+  height: var(--section-queenstown-h);
+}
+
+.sport_type {
+  transition-duration: 0.5s;
+}
+
+.sport_type:hover {
+  flex: var(--golden-ratio);
+}
+
+.sport_label {
+  align-items: center;
+  display: flex;
+  height: var(--section-sport-select-h);
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.sport_label h1,
+.sport_item h2 {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin-block-end: 0;
+  text-shadow: 2px 2px 4px black;
+  transition-duration: 1s;
+  width: 100%;
+  user-select: none;
+}
+
+.sport_item h2 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sport_item h2:hover {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.sky_bg {
+  background-image: var(--sky-bg);
+}
+
+.land_bg {
+  background-image: var(--land-bg);
+}
+
+.water_bg {
+  background-image: var(--water-bg);
+}
+
+.skydive_bg {
+  background-image: var(--skydive-bg);
+}
+
+.indoor_skydive_bg {
+  background-image: var(--indoor-skydive-bg);
+}
+
+.bungy_bg {
+  background-image: var(--bungy-bg);
+}
+
+.sport_item {
+  animation-duration: 1s;
+  height: var(--sport-item-h);
+}
+
+.box {
+  background-color: red;
+  border: 2px solid green;
+  height: 100px;
+}
+
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+}
