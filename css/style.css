@@ -4,17 +4,19 @@
   --width-rate: 100vw / 1920;
   --section-banner-h: calc(851.8 * var(--width-rate));
   --section-queenstown-h: calc(873 * var(--width-rate));
-  --section-sport-select-h: calc(700 * var(--width-rate));
+  --section-sport-select-h: calc(1000 * var(--width-rate));
+  --section-sport-select-max-h: 700px;
   --sport-item-h: calc(var(--section-sport-select-h) / 2);
+  --sport-item-max-h: calc(var(--section-sport-select-max-h) / 2);
   --golden-ratio: 1.618;
 
   --queenstown-bg: url("https://goo.gl/dGCNhg");
   --sky-bg: url("https://goo.gl/aN5fMt");
   --land-bg: url("https://goo.gl/YnEG3x");
   --water-bg: url("https://goo.gl/Jvibmn");
-  --skydive-bg: url("../img/skydive.gif");
-  --indoor-skydive-bg: url("../img/iFly.gif");
-  --bungy-bg: url("../img/bungy.gif");
+  --skydive-bg: url("https://media.giphy.com/media/LWpqRakjzh0uEy9Iha/giphy.gif");
+  --indoor-skydive-bg: url("https://media.giphy.com/media/8lExREbjrWPKIDNZfq/giphy.gif");
+  --bungy-bg: url("https://media.giphy.com/media/1msBs72oL748GEfOUQ/giphy.gif");
 }
 
 * {
@@ -81,11 +83,18 @@ h2 {
   align-items: center;
   display: flex;
   height: var(--section-sport-select-h);
+  max-height: var(--section-sport-select-max-h);
   justify-content: center;
   left: 0;
   position: absolute;
   top: 0;
   z-index: 1;
+}
+
+.sport_item {
+  animation-duration: 1s;
+  height: var(--sport-item-h);
+  max-height: var(--sport-item-max-h);
 }
 
 .sport_label h1,
@@ -133,11 +142,6 @@ h2 {
 
 .bungy_bg {
   background-image: var(--bungy-bg);
-}
-
-.sport_item {
-  animation-duration: 1s;
-  height: var(--sport-item-h);
 }
 
 .box {
