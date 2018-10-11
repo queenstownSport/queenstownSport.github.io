@@ -1,4 +1,22 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+$width-rate: 100vw / 1920;
+$section-banner-h: 851.8 * $width-rate;
+$section-queenstown-h: 873 * $width-rate;
+$section-sport-select-h: 1000 * $width-rate;
+$section-sport-select-max-h: 700px;
+$sport-item-h: $section-sport-select-h / 2;
+$sport-item-max-h: $section-sport-select-max-h / 2;
+$golden-ratio: 1.618;
+
+$queenstown-bg: url("https://goo.gl/dGCNhg");
+$sky-bg: url("https://goo.gl/aN5fMt");
+$land-bg: url("https://goo.gl/YnEG3x");
+$water-bg: url("https://goo.gl/Jvibmn");
+$skydive-bg: url("https://media.giphy.com/media/LWpqRakjzh0uEy9Iha/giphy.gif");
+$indoor-skydive-bg: url("https://media.giphy.com/media/8lExREbjrWPKIDNZfq/giphy.gif");
+$bungy-bg: url("https://media.giphy.com/media/1msBs72oL748GEfOUQ/giphy.gif");
+
 * {
   font-family: "Noto Sans TC", sans-serif;
 }
@@ -34,8 +52,7 @@ h2 {
 }
 
 .grayScale {
-  -webkit-filter: grayscale(200%);
-          filter: grayscale(200%);
+  filter: grayscale(200%);
 }
 
 .overlay {
@@ -44,37 +61,28 @@ h2 {
 
 .section_banner {
   background-image: url("http://nztrip.com/wp-content/uploads/2017/11/NZONE-Skydive_Step-4.jpg");
-  height: 44.36458vw;
+  height: $section-banner-h;
 }
 
 .queenstown {
-  background-image: url("https://goo.gl/dGCNhg");
-  height: 45.46875vw;
+  background-image: $queenstown-bg;
+  height: $section-queenstown-h;
 }
 
 .sport_type {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .sport_type:hover {
-  -webkit-box-flex: 1.618;
-      -ms-flex: 1.618;
-          flex: 1.618;
+  flex: $golden-ratio;
 }
 
 .sport_label {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  height: 52.08333vw;
-  max-height: 700px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: $section-sport-select-h;
+  max-height: $section-sport-select-max-h;
+  justify-content: center;
   left: 0;
   position: absolute;
   top: 0;
@@ -82,35 +90,23 @@ h2 {
 }
 
 .sport_item {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  height: 26.04167vw;
-  max-height: 350px;
+  animation-duration: 1s;
+  height: $sport-item-h;
+  max-height: $sport-item-max-h;
 }
 
 .sport_label h1,
 .sport_item h2 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+  justify-content: center;
+  margin-block-end: 0;
   text-shadow: 2px 2px 4px black;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  transition-duration: 1s;
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .sport_item h2 {
@@ -123,27 +119,27 @@ h2 {
 }
 
 .sky_bg {
-  background-image: url("https://goo.gl/aN5fMt");
+  background-image: $sky-bg;
 }
 
 .land_bg {
-  background-image: url("https://goo.gl/YnEG3x");
+  background-image: $land-bg;
 }
 
 .water_bg {
-  background-image: url("https://goo.gl/Jvibmn");
+  background-image: $water-bg;
 }
 
 .skydive_bg {
-  background-image: url("https://media.giphy.com/media/LWpqRakjzh0uEy9Iha/giphy.gif");
+  background-image: $skydive-bg;
 }
 
 .indoor_skydive_bg {
-  background-image: url("https://media.giphy.com/media/8lExREbjrWPKIDNZfq/giphy.gif");
+  background-image: $indoor-skydive-bg;
 }
 
 .bungy_bg {
-  background-image: url("https://media.giphy.com/media/1msBs72oL748GEfOUQ/giphy.gif");
+  background-image: $bungy-bg;
 }
 
 .box {
@@ -156,6 +152,7 @@ h2 {
   h1 {
     font-size: 50px;
   }
+
   h2 {
     font-size: 40px;
   }
@@ -165,6 +162,7 @@ h2 {
   h1 {
     font-size: 44px;
   }
+
   h2 {
     font-size: 36px;
   }
@@ -174,6 +172,7 @@ h2 {
   h1 {
     font-size: 40px;
   }
+
   h2 {
     font-size: 32px;
   }
@@ -183,6 +182,7 @@ h2 {
   h1 {
     font-size: 32px;
   }
+
   h2 {
     font-size: 24px;
   }
@@ -192,6 +192,7 @@ h2 {
   h1 {
     font-size: 24px;
   }
+
   h2 {
     font-size: 16px;
   }
@@ -201,8 +202,8 @@ h2 {
   h1 {
     font-size: 20px;
   }
+
   h2 {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=style.css.map */
